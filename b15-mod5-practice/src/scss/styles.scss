@@ -1,0 +1,16 @@
+@use "bootstrap";
+main:has(#layout-list:checked) {
+    article {
+        &[class^="col"] {
+            width: 100%;
+        }
+    }
+    .card {
+        .col-12:first-child {
+            width: 10%;
+        }
+        .col-12:last-child {
+            width: 90%;
+        }
+    }
+}
