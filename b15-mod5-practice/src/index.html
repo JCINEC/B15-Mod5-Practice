@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Practice Module 5</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -12,7 +12,7 @@
     />
   </head>
   <body>
-    <script type="module" src="index.js"></script>
+    <script type="module" src="ts/index.ts"></script>
     <header>
       <nav class="navbar navbar-dark navbar-expand-lg bg-dark px-5">
         <div class="container-fluid">
@@ -33,7 +33,12 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 navbar-nav-scroll">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">
+                <a
+                  id="active"
+                  class="active nav-link"
+                  aria-current="page"
+                  href="#"
+                >
                   Home
                 </a>
               </li>
@@ -64,491 +69,27 @@
       </nav>
     </header>
     <main class="container-fluid px-5 pt-3 pb-5">
-      <div class="mb-3">
-        <input
-          type="radio"
-          class="btn-check"
-          name="options-base"
-          id="layout-grid"
-          autocomplete="off"
-          checked
-        />
-        <label class="btn" for="layout-grid">
-          <img src="layout-grid.svg" alt="" />
-        </label>
-        <input
-          type="radio"
-          class="btn-check"
-          name="options-base"
-          id="layout-list"
-          autocomplete="off"
-        />
-        <label class="btn" for="layout-list">
-          <img src="layout-list.svg" alt="" />
-        </label>
+      <div class="d-flex justify-content-between align-items-center">
+        <div class="toolbar-buttons d-flex">
+          <button id="btn-grid-mode" class="btn">
+            <img src="layout-grid.svg" alt="" />
+          </button>
+          <button id="btn-list-mode" class="btn">
+            <img src="layout-list.svg" alt="" />
+          </label>
+        </div>
+        <select
+            id="movie-type-select"
+            data-width="100%"
+            name="sellist1"
+          >
+            <option value="now_playing">En cartelera</option>
+            <option value="popular">Populares</option>
+            <option value="top_rated">Mejor valoradas</option>
+            <option value="upcoming">Próximamente</option>
+        </select>
       </div>
-      <div class="row">
-        <article class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-4">
-          <div class="card">
-            <div class="row g-0">
-              <div class="col-12">
-                <img
-                  src="https://picsum.photos/200/300?random=1"
-                  class="card-img-top"
-                  alt="..."
-                />
-              </div>
-              <div class="col-12">
-                <div class="car-body">
-                  <h5 class="card-title">Card title</h5>
-                  <span>Rating</span>
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </article>
-        <article class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-4">
-          <div class="card">
-            <div class="row g-0">
-              <div class="col-12">
-                <img
-                  src="https://picsum.photos/200/300?random=2"
-                  class="card-img-top"
-                  alt="..."
-                />
-              </div>
-              <div class="col-12">
-                <div class="car-body">
-                  <h5 class="card-title">Card title</h5>
-                  <span>Rating</span>
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </article>
-        <article class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-4">
-          <div class="card">
-            <div class="row g-0">
-              <div class="col-12">
-                <img
-                  src="https://picsum.photos/200/300?random=3"
-                  class="card-img-top"
-                  alt="..."
-                />
-              </div>
-              <div class="col-12">
-                <div class="car-body">
-                  <h5 class="card-title">Card title</h5>
-                  <span>Rating</span>
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </article>
-        <article class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-4">
-          <div class="card">
-            <div class="row g-0">
-              <div class="col-12">
-                <img
-                  src="https://picsum.photos/200/300?random=4"
-                  class="card-img-top"
-                  alt="..."
-                />
-              </div>
-              <div class="col-12">
-                <div class="car-body">
-                  <h5 class="card-title">Card title</h5>
-                  <span>Rating</span>
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </article>
-        <article class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-4">
-          <div class="card">
-            <div class="row g-0">
-              <div class="col-12">
-                <img
-                  src="https://picsum.photos/200/300?random=5"
-                  class="card-img-top"
-                  alt="..."
-                />
-              </div>
-              <div class="col-12">
-                <div class="car-body">
-                  <h5 class="card-title">Card title</h5>
-                  <span>Rating</span>
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </article>
-        <article class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-4">
-          <div class="card">
-            <div class="row g-0">
-              <div class="col-12">
-                <img
-                  src="https://picsum.photos/200/300?random=6"
-                  class="card-img-top"
-                  alt="..."
-                />
-              </div>
-              <div class="col-12">
-                <div class="car-body">
-                  <h5 class="card-title">Card title</h5>
-                  <span>Rating</span>
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </article>
-        <article class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-4">
-          <div class="card">
-            <div class="row g-0">
-              <div class="col-12">
-                <img
-                  src="https://picsum.photos/200/300?random=7"
-                  class="card-img-top"
-                  alt="..."
-                />
-              </div>
-              <div class="col-12">
-                <div class="car-body">
-                  <h5 class="card-title">Card title</h5>
-                  <span>Rating</span>
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </article>
-        <article class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-4">
-          <div class="card">
-            <div class="row g-0">
-              <div class="col-12">
-                <img
-                  src="https://picsum.photos/200/300?random=8"
-                  class="card-img-top"
-                  alt="..."
-                />
-              </div>
-              <div class="col-12">
-                <div class="car-body">
-                  <h5 class="card-title">Card title</h5>
-                  <span>Rating</span>
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </article>
-        <article class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-4">
-          <div class="card">
-            <div class="row g-0">
-              <div class="col-12">
-                <img
-                  src="https://picsum.photos/200/300?random=9"
-                  class="card-img-top"
-                  alt="..."
-                />
-              </div>
-              <div class="col-12">
-                <div class="car-body">
-                  <h5 class="card-title">Card title</h5>
-                  <span>Rating</span>
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </article>
-        <article class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-4">
-          <div class="card">
-            <div class="row g-0">
-              <div class="col-12">
-                <img
-                  src="https://picsum.photos/200/300?random=10"
-                  class="card-img-top"
-                  alt="..."
-                />
-              </div>
-              <div class="col-12">
-                <div class="car-body">
-                  <h5 class="card-title">Card title</h5>
-                  <span>Rating</span>
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </article>
-        <article class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-4">
-          <div class="card">
-            <div class="row g-0">
-              <div class="col-12">
-                <img
-                  src="https://picsum.photos/200/300?random=11"
-                  class="card-img-top"
-                  alt="..."
-                />
-              </div>
-              <div class="col-12">
-                <div class="car-body">
-                  <h5 class="card-title">Card title</h5>
-                  <span>Rating</span>
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </article>
-        <article class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-4">
-          <div class="card">
-            <div class="row g-0">
-              <div class="col-12">
-                <img
-                  src="https://picsum.photos/200/300?random=12"
-                  class="card-img-top"
-                  alt="..."
-                />
-              </div>
-              <div class="col-12">
-                <div class="car-body">
-                  <h5 class="card-title">Card title</h5>
-                  <span>Rating</span>
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </article>
-        <article class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-4">
-          <div class="card">
-            <div class="row g-0">
-              <div class="col-12">
-                <img
-                  src="https://picsum.photos/200/300?random=13"
-                  class="card-img-top"
-                  alt="..."
-                />
-              </div>
-              <div class="col-12">
-                <div class="car-body">
-                  <h5 class="card-title">Card title</h5>
-                  <span>Rating</span>
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </article>
-        <article class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-4">
-          <div class="card">
-            <div class="row g-0">
-              <div class="col-12">
-                <img
-                  src="https://picsum.photos/200/300?random=14"
-                  class="card-img-top"
-                  alt="..."
-                />
-              </div>
-              <div class="col-12">
-                <div class="car-body">
-                  <h5 class="card-title">Card title</h5>
-                  <span>Rating</span>
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </article>
-        <article class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-4">
-          <div class="card">
-            <div class="row g-0">
-              <div class="col-12">
-                <img
-                  src="https://picsum.photos/200/300?random=15"
-                  class="card-img-top"
-                  alt="..."
-                />
-              </div>
-              <div class="col-12">
-                <div class="car-body">
-                  <h5 class="card-title">Card title</h5>
-                  <span>Rating</span>
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </article>
-        <article class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-4">
-          <div class="card">
-            <div class="row g-0">
-              <div class="col-12">
-                <img
-                  src="https://picsum.photos/200/300?random=16"
-                  class="card-img-top"
-                  alt="..."
-                />
-              </div>
-              <div class="col-12">
-                <div class="car-body">
-                  <h5 class="card-title">Card title</h5>
-                  <span>Rating</span>
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </article>
-        <article class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-4">
-          <div class="card">
-            <div class="row g-0">
-              <div class="col-12">
-                <img
-                  src="https://picsum.photos/200/300?random=17"
-                  class="card-img-top"
-                  alt="..."
-                />
-              </div>
-              <div class="col-12">
-                <div class="car-body">
-                  <h5 class="card-title">Card title</h5>
-                  <span>Rating</span>
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </article>
-        <article class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-4">
-          <div class="card">
-            <div class="row g-0">
-              <div class="col-12">
-                <img
-                  src="https://picsum.photos/200/300?random=18"
-                  class="card-img-top"
-                  alt="..."
-                />
-              </div>
-              <div class="col-12">
-                <div class="car-body">
-                  <h5 class="card-title">Card title</h5>
-                  <span>Rating</span>
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </article>
-        <article class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-4">
-          <div class="card">
-            <div class="row g-0">
-              <div class="col-12">
-                <img
-                  src="https://picsum.photos/200/300?random=19"
-                  class="card-img-top"
-                  alt="..."
-                />
-              </div>
-              <div class="col-12">
-                <div class="car-body">
-                  <h5 class="card-title">Card title</h5>
-                  <span>Rating</span>
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </article>
-        <article class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-4">
-          <div class="card">
-            <div class="row g-0">
-              <div class="col-12">
-                <img
-                  src="https://picsum.photos/200/300?random=20"
-                  class="card-img-top"
-                  alt="..."
-                />
-              </div>
-              <div class="col-12">
-                <div class="car-body">
-                  <h5 class="card-title">Card title</h5>
-                  <span>Rating</span>
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </article>
-      </div>
+      <div id="app" class="container"></div>
     </main>
     <footer>
       <nav class="navbar navbar-dark navbar-expand-lg bg-dark px-5 py-3">

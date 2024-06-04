@@ -14,3 +14,41 @@ main:has(#layout-list:checked) {
         }
     }
 }
+.nav-link{
+    color: #FFFFFF;
+}
+.active {
+    --bs-navbar-active-color: #FFFFFF8C;
+    cursor: default;
+}
+.poster {
+    width: 100%;
+}
+/*grid*/
+.card-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+.card-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+}
+/*List*/
+article.list {
+        width: 100%;
+}
+.card-list {
+    .col-12:first-child {
+        width: 10%;
+    }
+    .col-12:last-child {
+        width: 90%;
+    }
+}
+
