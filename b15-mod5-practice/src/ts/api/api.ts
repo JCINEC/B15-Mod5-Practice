@@ -1,5 +1,6 @@
 import { ApiConfig } from '../models/api-config.interface';
-import { movieMapper, movieDetailMapper } from '../models/movie-data.mapper';
+import { movieMapper } from '../models/movie-data.mapper';
+import { movieDetailMapper } from '../models/movie-detail.mapper';
 import { MovieListData } from '../models/movie-list-data.interface';
 import { MovieDetail } from '../models/movie-detail.interface';
 import { MovieListType } from '../models/movie-type.enum';
