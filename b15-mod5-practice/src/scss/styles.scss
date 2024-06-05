@@ -1,5 +1,5 @@
 @use "bootstrap";
-main:has(#layout-list:checked) {
+/*main:has(#layout-list:checked) {
     article {
         &[class^="col"] {
             width: 100%;
@@ -13,7 +13,8 @@ main:has(#layout-list:checked) {
             width: 90%;
         }
     }
-}
+}*/
+/*header nav*/
 .nav-link{
     color: #FFFFFF;
 }
@@ -21,6 +22,7 @@ main:has(#layout-list:checked) {
     --bs-navbar-active-color: #FFFFFF8C;
     cursor: default;
 }
+/*movies*/
 .poster {
     width: 100%;
 }

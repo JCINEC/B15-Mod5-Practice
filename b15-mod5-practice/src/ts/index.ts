@@ -1,13 +1,14 @@
 import "../scss/styles.scss";
 
-import { addEventListenerMovieListType, addEventListenerMovieGridButton, addEventListenerMovieListButton } from "./event/event";
-import { firstLoading } from "./movie/movie"
+import { addEventListenerMovieListType, addEventListenerMovieGridButton, addEventListenerMovieListButton, addEventListenerClickSearch } from "./event/event";
+import { updateMoviesContent } from "./movie/movie"
 
 addEventListenerMovieListType();
 addEventListenerMovieGridButton();
 addEventListenerMovieListButton();
+addEventListenerClickSearch();
 
-firstLoading();
+updateMoviesContent();
 
 
 
