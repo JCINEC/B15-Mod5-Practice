@@ -1,13 +1,17 @@
 import { Actor } from "./actor.interface";
-export interface MovieListDetail {
-    id: number;
-    title: string;
-    description: string;
-    year: string;
-    rating: number;
-    poster: string;
-    backdrop: string;
-    actors: Actor[];
+export interface MovieDetail {
+    id: number; /*id*/
+    poster: string; /*poster_path*/
+    backdrop: string; /*backdrop_path*/
+    title: string; /*title*/
+    rating: number; /*vote_average*/
+    year: string; /*release_date getYear()*/
+    synopsis: string; /*overview*/
+    director: string; /*crew[0].name where crew[0].job === "Director"*/
+    director_path: string; /*crew[0].profile_path where crew[0].job === "Director"*/
+    actors: Actor[]; /*[[credists.cast[0].name, credists.cast[0].profile_path, credists.cast[0].character], [credists.cast[1].name, credists.cast[1].profile_path, credists.cast[1].character], [credists.cast[2].name, credists.cast[2].profile_path, credists.cast[2].character], [credists.cast[3].name, credists.cast[3].profile_path, credists.cast[3].character]]*/
+    genres: string[]; /*genres.map((elem)=>elem.name)*/
+    duration: number; /*runtime*/
 }
 
 /*{

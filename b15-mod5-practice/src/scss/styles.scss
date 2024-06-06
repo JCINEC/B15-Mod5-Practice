@@ -54,3 +54,27 @@ article.list {
     }
 }
 
+.opacity {
+    background-color: rgba(#000,0.5);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*&>.container{
+        max-width: 1200px;
+        min-width: 400px;
+    }*/
+    &>.content{
+        margin: 0;
+        padding: 30px;
+        color: white;
+    }
+}
+.backdrop {
+    width: 100%;
+    height: 600px;
+    background-size: cover;
+    background-position: center center;
+    //color: white;
+}

@@ -36,13 +36,13 @@ import { MovieListType } from '../models/movie-type.enum';
     return config.baseUrl + 'movie/' + id + '?Y&append_to_response=credits&language=' + config.langIso + '&api_key=' + config.apiKey;
   }
 
+  /*Revisar*/
   export async function getDetailsData(id: string):Promise<MovieDetail> {
     const apiConfig = config();
     const url = getDetailListUrl(apiConfig, id);
     const response = await fetch(url);
     const data = await response.json();
-    const movie: any = data?.results;
-    return movie.map(movie => movieDetailMapper(movie));
+    return movieDetailMapper(data);
   }
 
   function getSearchMovieListUrl(config: ApiConfig, text: string, page = 1): string {

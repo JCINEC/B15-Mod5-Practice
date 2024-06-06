@@ -1,5 +1,5 @@
 import { MovieListType } from "../models/movie-type.enum";
-import { searchMovie, setCurrentListMode, setCurrentListType, showMovieList, updateMoviesContent } from "../movie/movie";
+import { searchMovie, setCurrentListMode, setCurrentListType, showMovieList, updateMovieDetailsContent, updateMoviesContent } from "../movie/movie";
 import { MovieLayoutMode } from "../models/movie-layout-mode.enum";
 
 export function addEventListenerMovieListType(){
@@ -27,15 +27,17 @@ export function addEventListenerClickSearch() {
 }
 
 function back(event){
+    console.log('back');
     event.preventDefault();
-    document.getElementById("detail")?.setAttribute("visibility", "hidden");
-    document.getElementById("movies")?.setAttribute("visibility", "visible");
+    document.getElementById("detail")?.setAttribute("hidden", "true");
+    document.getElementById("movies")?.removeAttribute("hidden");
     /*Poner código de listado o grid de películas*/
     updateMoviesContent();
 }
 
 export function addEventListenerClickBack() {
-    const button = document.getElementById("back");
+    console.log("addEventListenerClickBack")
+    const button = document.getElementById("btn-back");
     button?.addEventListener('click', back);
     /*'https://api.themoviedb.org/3/search/keyword?page=1'*/
 }
@@ -59,5 +61,13 @@ export function addEventListenerMovieListButton() {
     elem.addEventListener("click", (event: Event) => {
         console.log("Button list mode clicked");
         setCurrentListMode(MovieLayoutMode.List)
+    });
+}
+
+export function addEventListenerMovieCard(card: HTMLElement) {
+    card.addEventListener('click', () => {
+        document.getElementById("movies")?.setAttribute("hidden", "true");
+        document.getElementById("detail")?.removeAttribute("hidden");
+        updateMovieDetailsContent(card.id);
     });
 }
